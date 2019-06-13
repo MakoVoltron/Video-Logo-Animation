@@ -1,0 +1,83 @@
+{% extends "_layout.html" %}
+
+{% block content %} 
+    <h1>Hello World</h1>
+
+
+    <div class="d-flex m-auto justify-content-center">
+        
+        <div class="row justify-content-center" >
+            <!-- Video segment -->
+            <div class="m-1 vid-segment">
+                <a class="vid-btn text-center" href="#">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span>Order</span>
+                </a>
+                <a href="#">
+                <video class="video-preview" witdh="352" height="198" muted>
+                    <source src="static/videos/video1.mov" type="video/mp4">
+                </video>
+                </a>
+            </div>
+            <!-- Video segment end -->
+
+            <!-- Video segment -->
+            <div class="m-1 vid-segment">
+                <a class="vid-btn" href="#">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span>Order</span>
+                </a>
+                <video class="video-preview" witdh="352" height="198" muted>
+                    <source src="static/videos/video1.mov" type="video/mp4">
+                </video>
+            </div>
+            <!-- Video segment end -->    
+            
+            <!-- Video segment -->
+            <div class="m-1 vid-segment">
+                <a class="vid-btn" href="#">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span>Order</span>
+                </a>
+                <video class="video-preview" witdh="352" height="198" muted>
+                    <source src="static/videos/video1.mov" type="video/mp4">
+                </video>
+            </div>
+            <!-- Video segment end -->
+        </div>
+
+
+<script>
+
+    const videos = document.querySelectorAll('.video-preview')
+    const buttons = document.querySelectorAll('.vid-btn')
+
+    for (let i = 0; i < videos.length; i++) {
+        videos[i].addEventListener('mouseover', function() {
+          console.log('play')
+          videos[i].play()
+        })
+        videos[i].addEventListener('mouseout', function() {
+          console.log('pause')
+          videos[i].pause()
+          videos[i].currentTime = 0;
+        })
+        buttons[i].addEventListener('mouseover', function() {
+            console.log('button hover')
+            videos[i].play();
+        })
+        buttons[i].addEventListener('mouseout', function() {
+            console.log('button hover')
+            videos[i].pause()
+            videos[i].currentTime = 0;
+        })
+      }
+
+
+
+
+    
+
+</script>
+
+{% endblock content %}

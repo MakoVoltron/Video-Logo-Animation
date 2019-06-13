@@ -1,0 +1,57 @@
+
+        
+        <div>
+            <!-- Video segment -->
+            <div class="vid-segment">
+                <a class="vid-btn" href="#">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span>Add to cart</span>
+                </a>
+                <video class="video-preview" witdh="352" height="198" muted>
+                    <source src="static/videos/video1.mov" type="video/mp4">
+                </video>
+            </div>
+            <!-- Video segment end -->
+
+            <!-- Video segment -->
+            <div class="vid-segment">
+                <a class="vid-btn" href="#">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span>Add to cart</span>
+                </a>
+                <video class="video-preview" witdh="352" height="198" muted>
+                    <source src="static/videos/video1.mov" type="video/mp4">
+                </video>
+            </div>
+            <!-- Video segment end -->    
+            
+
+<script>
+        
+    function videoPlay() {
+        loop = true;
+        play()
+        console.log("Video plays")
+    }
+
+
+    function videoStop() {
+        currentTime = 0;
+        pause()
+        console.log("Video stops")
+    }
+
+    
+    const videos = document.getElementsByClassName('.vid-segment')
+    const buttons = document.getElementsByClassName('.vid-btn')
+
+    for(var i = 0; i < videos.length; i++)   {
+        videos[i].addEventListener('mouseover', videoPlay);
+        videos[i].addEventListener('mouseout', videoStop);
+        buttons[i].addEventListener('mouseover', function() {
+            buttons[i].nextElementSibling.play()
+        })  
+
+    }         
+    
+</script>

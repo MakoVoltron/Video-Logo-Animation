@@ -1,0 +1,53 @@
+/* body {
+    background-color: red;
+} */
+
+
+.vid-btn {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    font-weight: 600;
+    margin: 158px 10px 10px 255px;
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    text-decoration: none!important;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-left: 265px;
+    /* padding-left: 12px;
+    padding-right: 12px; */
+    width: 80px;
+    -webkit-box-shadow: 10px 7px 15px -5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 10px 7px 15px -5px rgba(0,0,0,0.1);
+    box-shadow: 10px 7px 15px -5px rgba(0,0,0,0.1); 
+    opacity: 0.2;
+    /* transition: 0.3s ease-in-out; */
+    transition: opacity 0.3s;
+    transition: margin-left 0.3s;
+}
+
+
+.vid-btn:hover {
+    opacity: 1;
+    color: black;
+    margin-left: 275px;
+    transition: all 0.4s ease-in-out;
+}
+
+.vid-segment:hover .vid-btn {
+    visibility: visible;
+}
+
+
+a span {
+    padding-left: 2px;
+}
+
+
+/* .vid-btn:hover span {
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+} */
