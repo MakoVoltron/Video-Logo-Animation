@@ -9,17 +9,28 @@
         <div class="row justify-content-center" >
             <!-- Video segment -->
             <div class="m-1 vid-segment">
-                <a class="vid-btn text-center" href="#">
-                    <i class="fa fa-shopping-cart"></i> 
-                    <span>Order</span>
-                </a>
-                <a href="#">
+                <div class="vid-btn-stripe">
+             
+                    <form action="/charge" method="post">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js"
+                            class="stripe-button"
+                            data-key="{{ key }}"
+                            data-description="A Flask Charge"
+                            data-amount="6900"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+               
                 <video class="video-preview" witdh="352" height="198" muted>
                     <source src="static/videos/video1.mov" type="video/mp4">
                 </video>
-                </a>
+
             </div>
             <!-- Video segment end -->
+                
+                
 
             <!-- Video segment -->
             <div class="m-1 vid-segment">
@@ -50,7 +61,7 @@
 <script>
 
     const videos = document.querySelectorAll('.video-preview')
-    const buttons = document.querySelectorAll('.vid-btn')
+    const buttons = document.querySelectorAll('.vid-btn-stripe')
 
     for (let i = 0; i < videos.length; i++) {
         videos[i].addEventListener('mouseover', function() {
